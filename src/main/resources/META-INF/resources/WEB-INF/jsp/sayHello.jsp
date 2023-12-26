@@ -1,0 +1,8 @@
+<html>
+    <head>
+        <title>It's the title of page</title>
+    </head>
+    <body>
+        <p> Just Text in the Body </p>
+    </body>
+</html>
