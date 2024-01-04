@@ -1,28 +1,38 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
-<html lang="en" xmlns:form="http://www.w3.org/1999/html">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Todos</title>
-    <link href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+<%@ include file="common/header.jspf" %>
+<%@ include file="common/navigation.jspf" %>
 
 <div class="container">
     <form:form method="post" modelAttribute="todo">
         <h1>Enter Todo</h1>
-        Description :
-        <form:input type="text" path="description" required="required"/>
-        <form:errors path="description" cssClass="text-danger"/>
+
+        <fieldset class="mb-3">
+            <form:label path="description">Description</form:label>
+            <form:input type="text" path="description" required="required"/>
+            <form:errors path="description" cssClass="text-danger"/>
+        </fieldset>
+
+        <fieldset class="mb-3">
+            <form:label path="targetDate">Target Date</form:label>
+            <form:input type="text" path="targetDate" required="required"/>
+            <form:errors path="targetDate" cssClass="text-danger"/>
+        </fieldset>
+
+        <fieldset class="mb-3">
+            <form:label path="done" cssClass="mr-3">Done</form:label>
+            <form:checkbox path="done" cssClass="form-check-input"/>
+            <form:errors path="done" cssClass="text-danger"/>
+        </fieldset>
+
         <form:input type="hidden" path="id"/>
-        <form:input type="hidden" path="done"/>
         <input type="submit" class="btn btn-success">
     </form:form>
 </div>
 
+<%@ include file="common/footer.jspf" %>
 
-<script src="/webjars/bootstrap/5.3.2/js/bootstrap.min.js"></script>
-<script src="/webjars/jquery/3.7.1/jquery.min.js"></script>
-</body>
-</html>
+<script type="text/javascript">
+    $('#targetDate').datepicker({
+        format: 'yyyy-mm-dd',
+    });
+</script>
+
