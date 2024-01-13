@@ -18,14 +18,21 @@ public class SpringSecurityConfiguration {
     @Bean
     public InMemoryUserDetailsManager createUserDetailsManager(){
 
+        UserDetails user1 = createUser("anand","oops");
+        UserDetails user2 = createUser("yadav","123");
+
+        return new InMemoryUserDetailsManager(user1, user2);
+    }
+
+    private UserDetails createUser(String username, String password) {
         Function<String, String> passwordEncoder = input -> passwordEncoder().encode(input);
         UserDetails userDetails = User.builder()
                 .passwordEncoder(passwordEncoder)
-                .username("anand")
-                .password("oops")
+                .username(username)
+                .password(password)
                 .roles("USER", "ADMIN")
                 .build();
-        return new InMemoryUserDetailsManager(userDetails);
+        return userDetails;
     }
 
     @Bean
