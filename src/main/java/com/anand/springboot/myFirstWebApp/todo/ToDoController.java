@@ -71,6 +71,7 @@ public class ToDoController {
         if(bindingResult.hasErrors()){
             return "addTodo";
         }
+        todo.setUserName(getLoggedInUsername());
         todoService.updateTodo(todo);
         return "redirect:list-todos";
     }
