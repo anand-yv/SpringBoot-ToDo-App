@@ -1,10 +1,23 @@
 package com.anand.springboot.myFirstWebApp.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
+// JPA : Bean -> Database Table
+
+@Entity
 public class Todo {
+
+    public Todo() {
+
+    }
+
+    @Id
+    @GeneratedValue
     private int id;
     private String userName;
     @Size(min= 5, message = "Enter at least 5 Characters")

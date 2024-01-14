@@ -1,0 +1,10 @@
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1001, 'anand', 'Learn Java', CURRENT_DATE(), false);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1002, 'anand', 'Project on Java', CURRENT_DATE(), false);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1003, 'anand', 'Learn Spring', CURRENT_DATE(), false);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1004, 'anand', 'Learn SpringBoot', CURRENT_DATE(), true);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1005, 'anand', 'Learn ReactJS', CURRENT_DATE() + 1, false);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1006, 'anand', 'Learn SpringBoot and ReactJS', CURRENT_DATE(), false);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1007, 'anand', 'Project on SprigBoot and ReactJS', CURRENT_DATE(), true);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1008, 'anand', 'Flight Booking Management System using SpringBoot', CURRENT_DATE(), false);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1009, 'anand', 'Interview Preparation for SpringBoot', CURRENT_DATE(), false);
+insert into todo(ID, USER_NAME, DESCRIPTION, TARGET_DATE, DONE) values(1010, 'anand', 'Give Interview to Yourself', CURRENT_DATE(), true);
